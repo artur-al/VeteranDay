@@ -1,0 +1,312 @@
+body{
+    background-color: black;
+}
+h1{
+    color: aliceblue;
+    font: size 300px;
+    position: center;
+}
+a{
+    color: aliceblue;
+    size: 50px;
+    text-decoration: none; 
+}
+ul li{
+    position: relative;
+    list-style: none;
+}
+.wp{
+    height: 160px;
+    width: 160px;
+}
+/*
+ ul li
+{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+*/
+ ul li a
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+ ul li a .icon
+{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.75s;
+    color: var(--clr);
+}
+ul li:hover a .icon
+{
+    transform: translateY(-30px);
+}
+ ul li a .text
+{
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+ ul li:hover a .text
+{
+    opacity: 1;
+    transform: translateY(10px);
+}
+/*barrazinha lateral pika*/
+body::-webkit-scrollbar {
+    width: 12px;               /* largura da barra inteira */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #000;        /* cor do fundo da barra */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff;    /* cor do baguio q vai pra cima e pra baixo sla esqueci o nome */
+    border-radius: 20px;       /* tamanho da borda dessa porra */
+    border: 3px solid #fff;  /* cor da borda */
+  }
+  /*
+*/
+button{
+    border-radius: 10px;
+    background-color: red;
+}
+button a{
+    background-color: red;
+}
+@media (max-width: 8000px)
+{
+    .menu-lateral{
+        display: none;
+    }
+}
+@media (max-width: 992px)
+{
+  .principal__titulo
+  {
+    font-size:400%;
+  }
+  img
+  {
+      display: none;
+  }
+  .imagem__imagens{
+    display: block;
+}
+  .linguas{
+      display: block;
+  }
+  .container
+  {
+    height: 50vh;
+    display: initial;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+.principal__container
+    {
+    display:flex;
+    background-image: url(../img/Guera.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat
+    }
+    .cabecalho__navegacao-lista
+    {
+      width: 100%;
+      height: 100%
+    }
+    .menu-lateral{
+        display: none;
+    }
+}
+@media (max-width: 800px){
+    .cabecalho__navegacao{
+        display: none;
+    }
+    .cabecalho__navegacao-lista{
+        display:none;
+    }
+
+    .menu-lateral{
+        display: flex;
+        background-color: #000;
+    }
+
+    .lista__linguas{
+        display: flex;
+        position: absolute;
+        right: 0px;
+    }
+
+    .cabecalho__menu-hamburguer{
+        width: 48px;
+        height: 48px;
+        background-image: url(../img/Menu\ Aberto.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        background-color: black;
+        
+    }
+    .lista-menu{
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 100vw;
+        background-color: black;
+    }
+    
+    .container__botao{
+        display: none;
+        
+    }
+    .container__botao:checked~.lista-menu{
+        display: block;
+        position: relative;
+    }
+    
+    .lista-menu__titulo,.lista-menu__item{
+        padding: 1em;
+        background-color: var(--branco);
+    }
+    
+    .lista-menu__titulo{
+        color: var(--laranja);
+        font-weight: 700;
+    }
+    
+    .lista-menu__link{
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+    
+    }
+
+    .cabecalho{
+        background-color: black;
+    }
+
+    .titulo__cabecalho{
+        justify-self: flex-end;
+        margin-left: auto;
+        padding: 0.5em;
+    }
+    .header{
+        justify-items: flex-end;}
+}
+@media (max-width: 648px){
+
+    .cabecalho__navegacao-lista{
+        display:none;
+    }
+
+    .menu-lateral{
+        display: flex;
+        background-color: #000;
+        justify-items: flex-start;
+    
+    }
+
+    .lista__linguas{
+        display: flex;
+        position: absolute;
+        right: 0px;
+    }
+
+    .cabecalho__menu-hamburguer{
+        width: 48px;
+        height: 48px;
+        background-image: url(../img/Menu\ Aberto.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        background-color: black;
+        
+    }
+    .lista-menu{
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 100vw;
+        background-color: black;
+    }
+    
+    .container__botao{
+        display: none;
+        
+    }
+    .container__botao:checked~.lista-menu{
+        display: block;
+        position: relative;
+    }
+    
+    .lista-menu__titulo,.lista-menu__item{
+        padding: 1em;
+        background-color: var(--branco);
+       margin-right: 359px;
+    }
+    
+    .lista-menu__titulo{
+        color: var(--laranja);
+        font-weight: 700;
+    }
+    
+    
+    .lista-menu__link{
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+    
+    }
+
+    .cabecalho{
+        background-color: black;
+    }
+
+    .titulo__cabecalho{
+        justify-self: flex-end;
+        margin-left: auto;
+        padding: 0.5em;
+    
+    }
+
+    .header{
+        justify-items: flex-end;
+    }
+    A{
+        width: 80%;
+    }
+    .cabecalho__menu-hamburguer container__imagem::hover{
+        display: none;
+    }
+}
+@media (max-width: 400px){
+    .rotulo__menu{
+        margin: 2em;
+    }
+    .cabecalho__menu-hamburguer container__imagem::hover{
+        display: none;
+    }
+    .lista-menu__link{
+        padding: 10px;
+    }
+}
